@@ -1,0 +1,56 @@
+import UIKit
+
+// MARK: - Pocket App
+
+class Pocket {
+    
+    // MARK: - Properties
+    
+    var appointments: [Appointment]
+    
+    // MARK: - Initialization
+    
+    init() {
+        appointments = []
+    }
+    
+    // MARK: - Appointment Management
+    
+    func addAppointment(appointment: Appointment) {
+        appointments.append(appointment)
+    }
+    
+    func removeAppointment(appointment: Appointment) {
+        if let index = appointments.firstIndex(of: appointment) {
+            appointments.remove(at: index)
+        }
+    }
+    
+    // MARK: - Appointment Communication
+    
+    func communicateWithInsuranceAgent(appointment: Appointment) {
+        // Code to communicate with insurance agent
+    }
+    
+    func communicateWithDoctor(appointment: Appointment) {
+        // Code to communicate with doctor
+    }
+    
+    func communicateWithPolicyProvider(appointment: Appointment) {
+        // Code to communicate with policy provider
+    }
+    
+    func communicateWithPolicyHolder(appointment: Appointment) {
+        // Code to communicate with policy holder
+    }
+}
+
+// MARK: - Appointment
+
+struct Appointment {
+    var date: Date
+    var insuranceAgent: String
+    var doctor: String
+    var policyProvider: String
+    var policyHolder: String
+}
